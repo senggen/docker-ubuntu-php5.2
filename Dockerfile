@@ -5,7 +5,7 @@ FROM ubuntu:14.04
 # Install needed packages
 RUN apt-get update && apt-get install -y \
     autoconf ca-certificates curl file gcc \
-    libjpeg62-turbo libmysqlclient18 libpng12-0 libxml2 \
+    libjpeg62 libmysqlclient18 libpng12-0 libxml2 \
     make pkg-config sendmail --no-install-recommends \
     && rm -r /var/lib/apt/lists/*
 
