@@ -37,7 +37,7 @@ RUN tar -xf php.tar.bz2 -C /usr/src/php --strip-components=1
 RUN gzip -cd php-fpm.diff.gz > /tmp/php-fpm.diff
 RUN rm php*
 RUN cd /usr/src/php
-RUN patch -p1 < /tmp/php-PHP_VERSION-libxml2.patch
+#RUN patch -p1 < /tmp/php-PHP_VERSION-libxml2.patch
 RUN patch -p1 < /tmp/php-PHP_VERSION-openssl.patch
 RUN patch -p1 < /tmp/php-fpm.diff
 RUN ln -s /usr/lib/x86_64-linux-gnu/libjpeg.a /usr/lib/libjpeg.a
